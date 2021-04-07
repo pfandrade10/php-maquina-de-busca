@@ -1,16 +1,16 @@
 Máquina de Busca - PHP
 
-- COMANDO para instalar dependências:
+- Instalar dependências:
 ```
   composer install
 ```  
 
-- COMANDO para listar as máquinas de buscas disponíveis:
+- Listar as máquinas de buscas disponíveis:
 ```
   php app engines
 ```  
 
-- COMANDO para realizar uma pesquisa no wikipedia (default) com o termo informado no comando:
+- Realizar uma pesquisa com o parâmetro informado:
 ```
-  php app search DIGITE_TERMO
+  php app search PARAMETRO
 ```  
