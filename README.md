@@ -1,7 +1,5 @@
 Máquina de Busca - PHP
 
-Autor: Alex Miller Carvalho
-
 - COMANDO para instalar dependências:
 ```
   composer install
