@@ -1,23 +1,16 @@
 <?php
 
-namespace App\Engine\Wikipedia;
+namespace App\Engine\Wikiwix;
 
 use App\Engine\EngineInterface;
 use App\Result;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
-class WikipediaEngine implements EngineInterface
+class WikiwixEngine implements EngineInterface
 {
-    private const URI = 'https://pt.wikipedia.org/w/index.php?search=%s&title=Especial:Pesquisar&fulltext=1&ns0=1';
-        
-     /**
-     * Essa URL parou de funcionar:
-     * https://pt.wikipedia.org/w/index.php?search=%s&title=Especial+Pesquisar&fulltext=1&ns0=1
-     */                    
+    private const URI = 'http://www.wikiwix.com/index.php?lang=pt&art=true&disp=article&action=%s';
 
-    /**
-     * @var WikipediaParser
-     */
+    /** @var WikiwixParser */
     private $parser;
 
     /**
@@ -26,11 +19,11 @@ class WikipediaEngine implements EngineInterface
     private $client;
 
     /**
-     * WikipediaSearch constructor.
-     * @param WikipediaParser $parser
+     * WikiwixEngine constructor.
+     * @param WikiwixParser $parser
      * @param HttpClientInterface $client
      */
-    public function __construct(WikipediaParser $parser, HttpClientInterface $client)
+    public function __construct(WikiwixParser $parser, HttpClientInterface $client)
     {
         $this->parser = $parser;
         $this->client = $client;
@@ -46,6 +39,6 @@ class WikipediaEngine implements EngineInterface
 
     public static function getName(): String
     {
-        return 'wikipedia';
+        return 'wikiwix';
     }
 }

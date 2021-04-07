@@ -1,9 +1,18 @@
+Máquina de Busca - PHP
 
-# Atividade de Maquina de busca em php
-# Desenvolvimento web full stack
-# PUC Minas
- 
+Autor: Alex Miller Carvalho
 
+- COMANDO para instalar dependências:
+```
+  composer install
+```  
 
+- COMANDO para listar as máquinas de buscas disponíveis:
+```
+  php app engines
+```  
 
-"# MaquinaBusca_php" 
+- COMANDO para realizar uma pesquisa no wikipedia (default) com o termo informado no comando:
+```
+  php app search DIGITE_TERMO
+```  
